@@ -1,0 +1,7 @@
+export enum Intent {
+  PRAYER = 'PRAYER',
+  HARD_MOMENT = 'HARD_MOMENT',
+  BIBLE = 'BIBLE',
+  DEVOTION = 'DEVOTION',
+  GENERAL = 'GENERAL',
+}
