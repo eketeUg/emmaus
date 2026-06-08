@@ -1,4 +1,8 @@
 import { Module } from '@nestjs/common';
+import { ScheduleModule } from '@nestjs/schedule';
+import { MongooseModule } from '@nestjs/mongoose';
+import * as dotenv from 'dotenv';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UsersModule } from './users/users.module';
@@ -10,14 +14,13 @@ import { CheckinsModule } from './checkins/checkins.module';
 import { MemoryModule } from './memory/memory.module';
 import { HardMomentsModule } from './hard-moments/hard-moments.module';
 import { DatabaseModule } from './database/database.module';
-import { MongooseModule } from '@nestjs/mongoose';
-import * as dotenv from 'dotenv';
 
 dotenv.config();
 
 @Module({
   imports: [
     MongooseModule.forRoot(process.env.MONGO_URI!),
+    ScheduleModule.forRoot(),
     UsersModule,
     MessagesModule,
     IntentsModule,

@@ -4,6 +4,10 @@ import { IntentsService } from './intents.service';
 describe('IntentsService', () => {
   let service: IntentsService;
 
+  beforeAll(() => {
+    process.env.OPENAI_API_KEY = 'mock-key';
+  });
+
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [IntentsService],

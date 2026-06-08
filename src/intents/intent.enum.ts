@@ -3,5 +3,6 @@ export enum Intent {
   HARD_MOMENT = 'HARD_MOMENT',
   BIBLE = 'BIBLE',
   DEVOTION = 'DEVOTION',
+  CHECK_IN = 'CHECK_IN',
   GENERAL = 'GENERAL',
 }

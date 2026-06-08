@@ -16,4 +16,8 @@ export class UsersService {
 
     return user;
   }
+
+  async findAll(): Promise<UserDocument[]> {
+    return this.userModel.find().exec();
+  }
 }
